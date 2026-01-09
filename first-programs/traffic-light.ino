@@ -13,7 +13,7 @@ void setup()
 	pinMode(RED_LIGHT, OUTPUT);
 	pinMode(YELLOW_LIGHT, OUTPUT);
 	pinMode(GREEN_LIGHT, OUTPUT);
-	
+
 	for(int i = 2; i < 5; i++) {
 		digitalWrite(i, LOW);
 	}
@@ -32,6 +32,5 @@ void loop()
 	digitalWrite(YELLOW_LIGHT, HIGH);
 	digitalWrite(GREEN_LIGHT, LOW);
 	delay(DELAY);
-	digitalWrite(RED_LIGHT, HIGH);	
 	digitalWrite(YELLOW_LIGHT, LOW);
 }
