@@ -1,10 +1,10 @@
 typedef struct {
-	int ledState;
-	int state;
-	int previousState;
+	bool ledState;
+	bool state;
+	bool previousState;
 	unsigned long lastDebounceTime;
-	int buttonPin;
-	int ledPin;
+	byte buttonPin;
+	byte ledPin;
 }buttonState;
 
 unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
@@ -25,7 +25,7 @@ heading "What if I really need to compare timestamps?". The first few lines are 
 */
 
 void setup() {
-	for(int i = 0; i < 6; i++) {
+	for(byte i = 0; i < 6; i++) {
 		pinMode(buttons[i].buttonPin, INPUT);
 		pinMode(buttons[i].ledPin, OUTPUT);
 		digitalWrite(buttons[i].ledPin, buttons[i].ledState);
@@ -62,7 +62,7 @@ int getLedState(buttonState *button) {
 }
 
 void loop() {
-	for(int i = 0; i < 6; i++) {
+	for(byte i = 0; i < 6; i++) {
 		digitalWrite(buttons[i].ledPin, getLedState(&buttons[i])); 
 	}
 
