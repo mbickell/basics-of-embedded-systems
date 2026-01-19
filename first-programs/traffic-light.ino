@@ -21,12 +21,7 @@ void setup()
 
 void loop()
 {
-	digitalWrite(RED_LIGHT, HIGH);
-	delay(100);
-	digitalWrite(RED_LIGHT, LOW);	
-	delay(100);
 
-/*
 	digitalWrite(RED_LIGHT, HIGH);
 	delay(DELAY * 2);
 	digitalWrite(YELLOW_LIGHT, HIGH);
@@ -39,5 +34,5 @@ void loop()
 	digitalWrite(GREEN_LIGHT, LOW);
 	delay(DELAY);
 	digitalWrite(YELLOW_LIGHT, LOW);
-*/
+
 }
