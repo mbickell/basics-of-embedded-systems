@@ -1,0 +1,1 @@
+﻿7-Segment LED 1 wired to pins 8, 9, 10, 11, 12 with value G
