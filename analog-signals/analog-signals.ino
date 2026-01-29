@@ -13,6 +13,7 @@ void setup()
 	Serial.begin(9600); // Initialize serial communication
 	Serial.println(ADC_STEPS);
 	pinMode(A0, INPUT);
+	pinMode(2, OUTPUT);
 }
 
 void loop()
@@ -23,9 +24,16 @@ void loop()
 	// 10 0000 0000 - 0512
 
 	Serial.println(rawValue);
+	Serial.println(ADC_STEPS);
 	Serial.print("Voltage: ");
 	Serial.print(voltage, 3); // Print voltage with 3 decimal places
 	Serial.println(" V");
 	delay(200); // Small delay to avoid flooding the serial monitor
+
+	if(voltage == 5.0) {
+		digitalWrite(2, HIGH);
+	} else {
+		digitalWrite(2, LOW);
+	}
 
 }
