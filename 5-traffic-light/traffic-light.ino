@@ -22,6 +22,7 @@ void checkPedestrainCrossing() {
 	}
 }
 
+// Allow user to enter a custom delay before the start of the program
 void handleDelayInput() {
 	Serial.println("Enter delay in ms,");
 	Serial.println("or press enter to accept default delays:");
@@ -74,5 +75,4 @@ void loop()
 	digitalWrite(greenLight, LOW);
 	delay(delay);
 	digitalWrite(yellowLight, LOW);
-
 }

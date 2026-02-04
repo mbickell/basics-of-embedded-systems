@@ -1,7 +1,3 @@
-
-/*	This is a default program--
-	Use File->Load Prog to load a different program
-*/
 #define RED_LIGHT 2
 #define YELLOW_LIGHT 3
 #define GREEN_LIGHT 4

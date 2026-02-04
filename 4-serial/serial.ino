@@ -1,5 +1,3 @@
-int count = 0;
-
 String colourMatcher(String colourInput) {
 	String match;
 
@@ -33,6 +31,4 @@ void loop()
 	String input = Serial.readString();  //read until timeout
 	input.trim(); 	// remove any \r \n whitespace at the end of the String
 	Serial.println(colourMatcher(input));
-
-	count++;
 }

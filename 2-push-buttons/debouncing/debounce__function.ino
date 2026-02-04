@@ -1,3 +1,5 @@
+// Use a struct to hold all info about the buttons and debouncing states
+
 typedef struct {
 	bool ledState;
 	bool state;
@@ -5,7 +7,7 @@ typedef struct {
 	unsigned long lastDebounceTime;
 	byte buttonPin;
 	byte ledPin;
-}buttonState;
+} buttonState;
 
 unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
 
@@ -30,7 +32,7 @@ void setup() {
 		pinMode(buttons[i].ledPin, OUTPUT);
 		digitalWrite(buttons[i].ledPin, buttons[i].ledState);
 	}
-	// set initial LED state
+	// set initial LED states
 }
 
 int getLedState(buttonState *button) {
@@ -65,5 +67,4 @@ void loop() {
 	for(byte i = 0; i < 6; i++) {
 		digitalWrite(buttons[i].ledPin, getLedState(&buttons[i])); 
 	}
-
 }

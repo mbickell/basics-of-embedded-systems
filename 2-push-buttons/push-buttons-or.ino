@@ -1,8 +1,3 @@
-
-/*	This is a default program--
-	Use File->Load Prog to load a different program
-*/
-
 char buttonOne = 2;
 char buttonTwo = 3;
 char led = 12;
